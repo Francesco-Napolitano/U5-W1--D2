@@ -30,4 +30,5 @@ public class Azienda {
     @OneToMany(mappedBy = "azienda")
     private Set<Intervento> interventi = new HashSet<>();
 
+
 }
