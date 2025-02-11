@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TecnicoRepository extends JpaRepository<Tecnico, Long> {
     public Tecnico findByMatricola(String matricola);
-    public
 }

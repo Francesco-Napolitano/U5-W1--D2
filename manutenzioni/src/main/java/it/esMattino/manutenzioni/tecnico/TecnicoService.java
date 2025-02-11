@@ -21,9 +21,6 @@ public class TecnicoService {
     // metodo per inserire un tecnico nuovo al database
 
     public CreateResponse save(TecnicoRequest request) {
-        if(tecnicoRepository.existsByMatricola(request.getMatricola())) {
-            new EntityExistsException("Tecnico già esistente");
-        }
         Tecnico tecnico = new Tecnico();
         BeanUtils.copyProperties(request, tecnico);
         tecnicoRepository.save(tecnico);
@@ -43,5 +40,4 @@ public class TecnicoService {
         }
         return tecnicoRepository.findById(id).get();
     }
-
 }
